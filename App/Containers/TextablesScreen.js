@@ -6,16 +6,7 @@ import { connect } from 'react-redux'
 
 // Styles
 import styles from './Styles/TextablesScreenStyle'
-const insurances = require("../Fixtures/active-insurances.json");
-const family = [
-      {title: 'Julian', description: 'Minstemann'},
-      {title: 'Hennie', description: 'Mellomst'},
-      {title: 'Third Title', description: 'Third Description'},
-      {title: 'Fourth Title', description: 'Fourth Description'},
-      {title: 'Fifth Title', description: 'Fifth Description'},
-      {title: 'Sixth Title', description: 'Sixth Description'},
-      {title: 'Seventh Title', description: 'Seventh Description'}
-]
+const insurances = require("../Fixtures/active-insurances-short.json");
 
 class TextablesScreen extends React.PureComponent {
   /* ***********************************************************
@@ -25,7 +16,6 @@ class TextablesScreen extends React.PureComponent {
   *************************************************************/
   state = {
     dataObjects: insurances
-
   }
 
   /* ***********************************************************
@@ -36,9 +26,13 @@ class TextablesScreen extends React.PureComponent {
   * e.g.
     return <MyCustomCell title={item.title} description={item.description} />
   *************************************************************/
+
+	// const insuranceSelected = (insurance) => {
+	// 	console.log("got: ", insurance);
+	// }
   renderRow ({item}) {
     return (
-      <TouchableOpacity style={styles.row}>
+      <TouchableOpacity style={styles.row} >
         <Text style={styles.boldLabel}>{item.beskrivelse}</Text>
         <Text style={styles.label}>{item.risikoer[0].utvidetBeskrivelse}</Text>
       </TouchableOpacity>
