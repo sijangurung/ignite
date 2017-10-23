@@ -35,7 +35,9 @@ export default class APITestingScreen extends React.Component {
     if (response.ok) {
       this.refs.result.setState({message: FJSON.plain(response.data), title: title})
     } else {
-      this.refs.result.setState({message: `${response.problem} - ${response.status}`, title: title})
+      this.refs.result.setState(
+        {message: `${response.problem} - ${response.status}`, title: title}
+      )
     }
   }
 
@@ -49,7 +51,11 @@ export default class APITestingScreen extends React.Component {
   renderButton (apiEndpoint) {
     const { label, endpoint, args = [''] } = apiEndpoint
     return (
-      <FullButton text={label || `${endpoint}(${args.join(', ')})`} onPress={this.tryEndpoint.bind(this, apiEndpoint)} styles={{marginTop: 10}} key={`${endpoint}-${args.join('-')}`} />
+      <FullButton text={label || `${endpoint}(${args.join(', ')})`}
+        onPress={this.tryEndpoint.bind(this, apiEndpoint)}
+        styles={{marginTop: 10}}
+        key={`${endpoint}-${args.join('-')}`}
+      />
     )
   }
 
