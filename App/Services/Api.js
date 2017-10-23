@@ -34,10 +34,11 @@ const create = (baseURL = 'https://api.github.com/') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
+  const getInsurancesForUser = () => api.get('https://www.devgjensidige.no/ip-web/forsikringer?t=1508746685401')
   const getRoot = () => api.get('')
   const getRate = () => api.get('rate_limit')
   const getUser = (username) => api.get('search/users', {q: username})
-  const getAuthToken = () => api.get('https://raw.githubusercontent.com/stabenfeldt/marcos/master/token.json')
+  const getUserToken = () => api.get('https://raw.githubusercontent.com/stabenfeldt/marcos/master/token.json')
 
   // ------
   // STEP 3
@@ -53,7 +54,7 @@ const create = (baseURL = 'https://api.github.com/') => {
   //
   return {
     // a list of the API functions from step 2
-    getAuthToken,
+    getUserToken,
     getRoot,
     getRate,
     getUser
