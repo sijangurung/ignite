@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, FlatList } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 
 // More info here: https://facebook.github.io/react-native/docs/flatlist.html
@@ -38,10 +38,10 @@ class TextablesScreen extends React.PureComponent {
   *************************************************************/
   renderRow ({item}) {
     return (
-      <View style={styles.row}>
+      <TouchableOpacity style={styles.row}>
         <Text style={styles.boldLabel}>{item.beskrivelse}</Text>
         <Text style={styles.label}>{item.risikoer[0].utvidetBeskrivelse}</Text>
-      </View>
+      </TouchableOpacity>
     )
   }
 
