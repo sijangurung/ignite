@@ -12,6 +12,7 @@ import styles from './Styles/APITestingScreenStyles'
 
 // API buttons here:
 const endpoints = [
+  { label: 'Gjensidige Auth Token', endpoint: 'getAuthToken' },
   { label: 'Github Root', endpoint: 'getRoot' },
   { label: 'Github Rate Limit', endpoint: 'getRate' },
   { label: 'Search User (gantman)', endpoint: 'getUser', args: ['gantman'] },

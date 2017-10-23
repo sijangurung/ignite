@@ -37,6 +37,7 @@ const create = (baseURL = 'https://api.github.com/') => {
   const getRoot = () => api.get('')
   const getRate = () => api.get('rate_limit')
   const getUser = (username) => api.get('search/users', {q: username})
+  const getAuthToken = () => api.get('https://raw.githubusercontent.com/stabenfeldt/marcos/master/token.json')
 
   // ------
   // STEP 3
@@ -52,6 +53,7 @@ const create = (baseURL = 'https://api.github.com/') => {
   //
   return {
     // a list of the API functions from step 2
+    getAuthToken,
     getRoot,
     getRate,
     getUser
