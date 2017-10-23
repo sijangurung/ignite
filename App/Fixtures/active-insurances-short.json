@@ -1,0 +1,173 @@
+[
+    {
+        "beskrivelse": "Hus",
+        "risikoer": [
+            {
+                "aarspremie": "6557",
+                "aarspremieValuta": "NOK",
+                "annenEier": null,
+                "betalingsmaate": null,
+                "betalingsmaatekode": null,
+                "betalingsterminer": [],
+                "brannkassenavn": "Indre \u00d8stfold og Andebu Gj.Brkavd. Rakkestad",
+                "brannkassenummer": "01000",
+                "dekninger": [
+                    {
+                        "aarspremie": "4413",
+                        "dekningnr": null,
+                        "dekningsvariabler": [],
+                        "egenandelbeskrivelse": "4.000",
+                        "egenandelkode": "04",
+                        "forsikringsumbeskrivelse": "Se vilk\u00e5r",
+                        "forsikringsumkode": "VI",
+                        "grunndekningnr": null,
+                        "omfangsliste": [],
+                        "produktdekningnavn": "Hus Pluss",
+                        "produktdekningnr": null,
+                        "rangering": 1,
+                        "utvidedeBeskrivelser": []
+                    },
+                    {
+                        "aarspremie": "275",
+                        "dekningnr": null,
+                        "dekningsvariabler": [],
+                        "egenandelbeskrivelse": "4.000",
+                        "egenandelkode": "4A",
+                        "forsikringsumbeskrivelse": "Se vilk\u00e5r",
+                        "forsikringsumkode": "VI",
+                        "grunndekningnr": null,
+                        "omfangsliste": [],
+                        "produktdekningnavn": "R\u00e5te og skadeinsekter",
+                        "produktdekningnr": null,
+                        "rangering": 99,
+                        "utvidedeBeskrivelser": []
+                    },
+                    {
+                        "aarspremie": "1478",
+                        "dekningnr": null,
+                        "dekningsvariabler": [],
+                        "egenandelbeskrivelse": "2.000",
+                        "egenandelkode": "02",
+                        "forsikringsumbeskrivelse": "",
+                        "forsikringsumkode": "DU",
+                        "grunndekningnr": null,
+                        "omfangsliste": [],
+                        "produktdekningnavn": "Innbo Pluss",
+                        "produktdekningnr": null,
+                        "rangering": 99,
+                        "utvidedeBeskrivelser": []
+                    },
+                    {
+                        "aarspremie": "391",
+                        "dekningnr": null,
+                        "dekningsvariabler": [],
+                        "egenandelbeskrivelse": "8.000",
+                        "egenandelkode": "08",
+                        "forsikringsumbeskrivelse": "",
+                        "forsikringsumkode": "",
+                        "grunndekningnr": null,
+                        "omfangsliste": [],
+                        "produktdekningnavn": "Naturskade",
+                        "produktdekningnr": null,
+                        "rangering": 99,
+                        "utvidedeBeskrivelser": []
+                    }
+                ],
+                "endretdato": 1488150000000,
+                "forsikringsnummer": "10011027",
+                "gjelderfradato": null,
+                "gjeldertildato": 1522533600000,
+                "grunnrisikonummer": "01007",
+                "hovedforfallsdato": 7772400000,
+                "ikraftDato": 1301608800000,
+                "kilde": "s2000",
+                "kjoretoygruppe": false,
+                "kundenavn": null,
+                "kundensRollekode": "FT",
+                "kundenummer": null,
+                "opphoersaarsak": null,
+                "partnerId": "GF",
+                "partref": "0001273126",
+                "produktgruppe": {
+                    "beskrivelse": "Bygninger, innbo og l\u00f8s\u00f8re",
+                    "kode": "02"
+                },
+                "produktrisikonummer": "1610",
+                "rabatter": [],
+                "risikonummer": "53583850",
+                "risikoproduktnavn": "Hus",
+                "risikoproduktnummer": "1610",
+                "sikkerhetstiltaksliste": [],
+                "trafikkavgift": null,
+                "trekkdatoAvtalegiro": null,
+                "underrisikonummer": null,
+                "utlopsdato": null,
+                "utvidetBeskrivelse": "B\u00e6rbyveien   71, 1890 Rakkestad",
+                "varslingstype": "OV"
+            }
+        ]
+    },
+    {
+        "beskrivelse": "Varehenger",
+        "risikoer": [
+            {
+                "aarspremie": "1848",
+                "aarspremieValuta": "NOK",
+                "annenEier": null,
+                "betalingsmaate": null,
+                "betalingsmaatekode": null,
+                "betalingsterminer": [],
+                "brannkassenavn": "Indre \u00d8stfold og Andebu Gj.Brkavd. Rakkestad",
+                "brannkassenummer": "01000",
+                "dekninger": [
+                    {
+                        "aarspremie": "1848",
+                        "dekningnr": null,
+                        "dekningsvariabler": [],
+                        "egenandelbeskrivelse": "4.000",
+                        "egenandelkode": "S4",
+                        "forsikringsumbeskrivelse": "Markedsver",
+                        "forsikringsumkode": "MA",
+                        "grunndekningnr": null,
+                        "omfangsliste": [],
+                        "produktdekningnavn": "Kasko",
+                        "produktdekningnr": null,
+                        "rangering": 1,
+                        "utvidedeBeskrivelser": []
+                    }
+                ],
+                "endretdato": 1488150000000,
+                "forsikringsnummer": "10011027",
+                "gjelderfradato": null,
+                "gjeldertildato": 1522533600000,
+                "grunnrisikonummer": "01001",
+                "hovedforfallsdato": 7772400000,
+                "ikraftDato": 1399500000000,
+                "kilde": "s2000",
+                "kjoretoygruppe": false,
+                "kundenavn": null,
+                "kundensRollekode": "FT",
+                "kundenummer": null,
+                "opphoersaarsak": null,
+                "partnerId": "GF",
+                "partref": "0001273126",
+                "produktgruppe": {
+                    "beskrivelse": "Kj\u00f8ret\u00f8y",
+                    "kode": "07"
+                },
+                "produktrisikonummer": "1201",
+                "rabatter": [],
+                "risikonummer": "61644920",
+                "risikoproduktnavn": "Varehenger",
+                "risikoproduktnummer": "1201",
+                "sikkerhetstiltaksliste": [],
+                "trafikkavgift": null,
+                "trekkdatoAvtalegiro": null,
+                "underrisikonummer": null,
+                "utlopsdato": null,
+                "utvidetBeskrivelse": "Varehenger, AP 6030",
+                "varslingstype": "OV"
+            }
+        ]
+    }
+]
