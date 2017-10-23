@@ -6,6 +6,16 @@ import { connect } from 'react-redux'
 
 // Styles
 import styles from './Styles/TextablesScreenStyle'
+const insurances = require("../Fixtures/active-insurances.json");
+const family = [
+      {title: 'Julian', description: 'Minstemann'},
+      {title: 'Hennie', description: 'Mellomst'},
+      {title: 'Third Title', description: 'Third Description'},
+      {title: 'Fourth Title', description: 'Fourth Description'},
+      {title: 'Fifth Title', description: 'Fifth Description'},
+      {title: 'Sixth Title', description: 'Sixth Description'},
+      {title: 'Seventh Title', description: 'Seventh Description'}
+]
 
 class TextablesScreen extends React.PureComponent {
   /* ***********************************************************
@@ -14,15 +24,8 @@ class TextablesScreen extends React.PureComponent {
   * Usually this should come from Redux mapStateToProps
   *************************************************************/
   state = {
-    dataObjects: [
-      {title: 'Julian', description: 'Minstemann'},
-      {title: 'Hennie', description: 'Mellomst'},
-      {title: 'Third Title', description: 'Third Description'},
-      {title: 'Fourth Title', description: 'Fourth Description'},
-      {title: 'Fifth Title', description: 'Fifth Description'},
-      {title: 'Sixth Title', description: 'Sixth Description'},
-      {title: 'Seventh Title', description: 'Seventh Description'}
-    ]
+    dataObjects: insurances
+
   }
 
   /* ***********************************************************
@@ -36,8 +39,8 @@ class TextablesScreen extends React.PureComponent {
   renderRow ({item}) {
     return (
       <View style={styles.row}>
-        <Text style={styles.boldLabel}>{item.title}</Text>
-        <Text style={styles.label}>{item.description}</Text>
+        <Text style={styles.boldLabel}>{item.beskrivelse}</Text>
+        <Text style={styles.label}>{item.risikoer[0].utvidetBeskrivelse}</Text>
       </View>
     )
   }
