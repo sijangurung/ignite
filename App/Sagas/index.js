@@ -12,7 +12,7 @@ import { GithubTypes } from '../Redux/GithubRedux'
 
 import { startup } from './StartupSagas'
 import { getUserAvatar } from './GithubSagas'
-import { fetchToken } from './AuthSagas'
+import { getUserToken } from './AuthSagas'
 
 /* ------------- API ------------- */
 
