@@ -10,6 +10,7 @@ import styles from './Styles/RootContainerStyles'
 
 class RootContainer extends Component {
   componentDidMount () {
+    console.tron.log('Hello, Martin');
     // if redux persist is not active fire startup action
     if (!ReduxPersist.active) {
       this.props.startup()
