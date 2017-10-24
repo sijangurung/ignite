@@ -32,7 +32,9 @@ class LaunchScreen extends Component {
           </View>
 
           <RoundedButton text="Fetch and store token"
-            onPress={ () => this.props.dispatchAction( { type: AuthTypes.TOKEN_REQUEST, username: 'martin' }) }
+            onPress={ () => this.props.dispatchAction( { type: AuthTypes.TOKEN_REQUEST,
+																												 username: 'martin'
+																											 }) }
           />
 
           <DevscreensButton />
@@ -53,5 +55,4 @@ const mapDispatchToProps = (dispatch) => ({
   dispatchAction: (action) => dispatch(action)
 })
 
-//export default connect(mapStateToProps, mapDispatchToProps)(LaunchScreen)
 export default connect(mapStateToProps, mapDispatchToProps)(LaunchScreen)

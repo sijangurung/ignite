@@ -38,7 +38,10 @@ const create = (baseURL = 'https://api.github.com/') => {
   const getRoot = () => api.get('')
   const getRate = () => api.get('rate_limit')
   const getUser = (username) => api.get('search/users', {q: username})
-  const getUserToken = () => api.get('https://raw.githubusercontent.com/stabenfeldt/marcos/master/token.json')
+
+  // Nothing done with the username provided here, yet.
+  const getUserToken = (username) => api.get('https://gist.githubusercontent.com/stabenfeldt/'+
+        '14db8a93d8bffd5258e29c03e2dfe234/raw/207c7facfa8ad5c1cce20ed08d954dad4a8ee75e/token.json')
 
   // ------
   // STEP 3
