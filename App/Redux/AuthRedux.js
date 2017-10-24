@@ -34,8 +34,10 @@ export const success = (state, action) => {
 }
 
 // failed to get the token
-export const failure = (state) =>
-  state.merge({ fetching: false, error: true, token: null })
+export const failure = (state, action) => {
+  console.tron.log('failure');
+  return state.merge({ fetching: false, error: true, token: null })
+}
 
 /* ------------- Hookup Reducers To Types ------------- */
 

@@ -2,13 +2,19 @@ import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
 import RoundedButton from '../Components/RoundedButton.js'
+import {getUserToken} from '../Redux/AuthActions'
+
+import { connect } from 'react-redux'
+import {AuthTypes} from '../Redux/AuthRedux'
+
 
 import { Images } from '../Themes'
 
 // Styles
 import styles from './Styles/LaunchScreenStyles'
 
-export default class LaunchScreen extends Component {
+// <RoundedButton text="Fetch and store token" onPress={() => window.alert('Rounded Button Pressed!')}  />
+class LaunchScreen extends Component {
   render () {
     return (
       <View style={styles.mainContainer}>
@@ -25,7 +31,9 @@ export default class LaunchScreen extends Component {
             </Text>
           </View>
 
-          <RoundedButton text="Fetch and store token" onPress={() => window.alert('Rounded Button Pressed!')}  />
+          <RoundedButton text="Fetch and store token"
+            onPress={ () => this.props.dispatchAction( { type: AuthTypes.TOKEN_REQUEST, username: 'martin' }) }
+          />
 
           <DevscreensButton />
         </ScrollView>
@@ -33,3 +41,17 @@ export default class LaunchScreen extends Component {
     )
   }
 }
+
+
+const mapStateToProps = (state) => {
+  return {
+    token: state.token
+  }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  dispatchAction: (action) => dispatch(action)
+})
+
+//export default connect(mapStateToProps, mapDispatchToProps)(LaunchScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(LaunchScreen)
