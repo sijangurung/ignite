@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
+import RoundedButton from '../Components/RoundedButton.js'
 
 import { Images } from '../Themes'
 
@@ -23,6 +24,8 @@ export default class LaunchScreen extends Component {
               Hi Martin
             </Text>
           </View>
+
+          <RoundedButton text="Fetch and store token" onPress={() => window.alert('Rounded Button Pressed!')}  />
 
           <DevscreensButton />
         </ScrollView>
