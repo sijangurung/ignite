@@ -15,7 +15,7 @@ export default Creators
 /* ------------- Initial State ------------- */
 
 export const INITIAL_STATE = Immutable({
-  avatar: null,
+  token: null,
   fetching: null,
   error: null,
   username: null
@@ -27,13 +27,13 @@ export const INITIAL_STATE = Immutable({
 export const request = (state, { username }) =>
   state.merge({ fetching: true, username, token: null })
 
-// successful avatar lookup
+// successful token lookup
 export const success = (state, action) => {
   const { token } = action
   return state.merge({ fetching: false, error: null, token })
 }
 
-// failed to get the avatar
+// failed to get the token
 export const failure = (state) =>
   state.merge({ fetching: false, error: true, token: null })
 
