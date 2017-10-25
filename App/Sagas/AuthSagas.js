@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects'
 import { path } from 'ramda'
-import AuthActions from '../Redux/AuthRedux.js'
+import AuthActions from '../Redux/AuthRedux'
 
 export function * getUserToken (api, action) {
   console.tron.log('Hello, from getUserToken');

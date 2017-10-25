@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
-import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
-import RoundedButton from '../Components/RoundedButton.js'
+import DevscreensButton from '../../ignite/DevScreens/DevscreensButton'
+import RoundedButton from '../Components/RoundedButton'
 import {getUserToken} from '../Redux/AuthActions'
 import {AuthTypes} from '../Redux/AuthRedux'
 
