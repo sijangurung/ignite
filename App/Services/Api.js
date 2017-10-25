@@ -34,7 +34,6 @@ const create = (baseURL = 'https://api.github.com/') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
-  const getInsurancesForUser = () => api.get('https://www.devgjensidige.no/ip-web/forsikringer?t=1508746685401')
   const getRoot = () => api.get('')
   const getRate = () => api.get('rate_limit')
   const getUser = (username) => api.get('search/users', {q: username})
