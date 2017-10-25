@@ -5,17 +5,16 @@ import AuthActions from '../Redux/AuthRedux'
 export function * getUserToken (api, action) {
   console.tron.log('Hello, from getUserToken');
   const { username } = action
-  console.tron.log('username: ', username);
+  console.tron.log('username: '+ action);
   // make the call to the api
   const response = yield call(api.getUserToken, username)
-  console.tron.log('We got response: ', response); // It's empty here.
 
-  //if (response.ok) {
-  //  console.tron.log('We got response: ', response);
-  //  yield put(AuthActions.userSuccess('OK'))
-  //} else {
-  //  console.tron.log( 'hi hihi');
-  //  yield put( { type: AuthActions.TOKEN_FAILURE } )
-  //  //yield put(AuthActions.userFailure())
-  //}
+  if(response.ok){
+    console.tron.log("Token: "+ response.data.token)
+    const token = response.data.token;
+    yield put(AuthActions.tokenSuccess(token))
+  }else{
+    console.tron.log( 'ERROR: hi hihi'+ JSON.stringify(error));
+    yield put(AuthActions.tokenFailure())
+  }
 }

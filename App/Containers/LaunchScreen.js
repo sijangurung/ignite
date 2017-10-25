@@ -13,8 +13,24 @@ import { Images } from '../Themes'
 // Styles
 import styles from './Styles/LaunchScreenStyles'
 
-// <RoundedButton text="Fetch and store token" onPress={() => window.alert('Rounded Button Pressed!')}  />
+const mapStateToProps = (state) => ({
+    token: state.auth.token,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  dispatchAction: (action) => dispatch(action),
+  getUserToken: (userName) => dispatch(getUserToken(userName))
+});
+
 class LaunchScreen extends Component {
+  state={
+    token: 'oldToken'
+  }
+  componentWillReceiveProps(nextProps) {
+    console.tron.log("NP: "+ JSON.stringify(nextProps))
+    this.setState({token: nextProps.token})
+  }
+
   render () {
     return (
       <View style={styles.mainContainer}>
@@ -28,13 +44,12 @@ class LaunchScreen extends Component {
             <Image source={Images.ready} />
             <Text style={styles.sectionText}>
               Hi Martin
+              Token: { this.state.token}
             </Text>
           </View>
 
           <RoundedButton text="Fetch and store token"
-            onPress={ () => this.props.dispatchAction( { type: AuthTypes.TOKEN_REQUEST,
-																												 username: 'martin'
-																											 }) }
+            onPress={ () => this.props.getUserToken('martin') }
           />
 
           <DevscreensButton />
@@ -43,16 +58,5 @@ class LaunchScreen extends Component {
     )
   }
 }
-
-
-const mapStateToProps = (state) => {
-  return {
-    token: state.token
-  }
-}
-
-const mapDispatchToProps = (dispatch) => ({
-  dispatchAction: (action) => dispatch(action)
-})
 
 export default connect(mapStateToProps, mapDispatchToProps)(LaunchScreen)

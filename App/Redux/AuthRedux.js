@@ -30,6 +30,7 @@ export const request = (state, { username }) =>
 // successful token lookup
 export const success = (state, action) => {
   const { token } = action
+  console.tron.log("Token in Saga :"+ token);
   return state.merge({ fetching: false, error: null, token })
 }
 
