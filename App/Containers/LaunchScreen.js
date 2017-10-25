@@ -3,9 +3,9 @@ import { ScrollView, Text, Image, View } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
 import RoundedButton from '../Components/RoundedButton.js'
 import {getUserToken} from '../Redux/AuthActions'
+import {AuthTypes} from '../Redux/AuthRedux'
 
 import { connect } from 'react-redux'
-import {AuthTypes} from '../Redux/AuthRedux'
 
 
 import { Images } from '../Themes'
