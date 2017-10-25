@@ -1,3 +1,10 @@
+# Project status
+
+Can fetch a token stored on gist.github.com from Devscreens, API Testing.
+The next goal is to connect that action to the "fetch an store token" button on the LaunchScreen.
+When inspection using Reactotron, I can see that it triggers a `TOKEN_REQUEST` and a reply from
+gist.github.com. But I'm not able to fetch the response.
+
 #  Textables
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
