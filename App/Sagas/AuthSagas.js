@@ -11,7 +11,7 @@ export function * getUserToken (api, action) {
 
   if (response.ok) {
     console.tron.log('We got response: ', response);
-    yield put(AuthActions.userSuccess(avatar))
+    yield put(AuthActions.userSuccess('OK'))
   } else {
     console.tron.log( 'hi hihi');
     yield put( { type: AuthActions.TOKEN_FAILURE } )
